@@ -19,12 +19,12 @@ const Footer = () => {
       
       <div className='flex justify-center items-center flex-col mt-5'>
         <p className='text-white text-base text-center'>Follow me for more projects</p>
-        <p className='text-white text-base text-center'> jatin-pandey01 </p>
+        <p className='text-white text-base text-center'> Bhavin, Dhruv, Jatin and Jatin </p>
       </div>
       
       <div className='sm:w-[90%] w-full h-[0.25px] bg-gray-400 mt-5'></div>
       <div className='sm:w-[90%] w-full flex justify-center items-center mt-3'>
-        <p className='text-white text-base text-center'>&copy; Jatin Pandey 2023</p>
+        <p className='text-white text-base text-center'>&copy; Bhavin, Dhruv, Jatin and Jatin 2023</p>
       </div>
     </div>
   )

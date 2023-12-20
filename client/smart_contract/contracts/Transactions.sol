@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0; 
 
+import "hardhat/console.sol";
+
 //It's like a class of java
 contract Transactions { 
     uint256 transactionCount;
@@ -25,7 +27,7 @@ contract Transactions {
     function addToBlockchain(address payable receiver, uint amount, string memory message, string memory keyword) public {
         transactionCount += 1;
         //Pushing into array, msg.sender : will be the person who's currently connecting with the contract.
-        transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, keyword)); 
+        transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, keyword));
         // Emit keyword is used to emit an event in solidity, which can be read by the client in Dapp.
         emit Transfer(msg.sender, receiver, amount, message, block.timestamp, keyword);
     }
@@ -36,7 +38,7 @@ contract Transactions {
     }
 
     function getTransactionCount() public view returns(uint256) {
-        return transactionCount;
+        return transactionCount;    
     }
-
+    
 }

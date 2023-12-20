@@ -21,7 +21,6 @@ export default [
     {
       transactionHash: '0x3cea3e1eb259da0a76ac010dc171bd1b2eb950f60efa71cba36997dee15e191b',
       url: "https://acegif.com/wp-content/uploads/gif-shaking-head-38.gif",
-      message: "",
       timestamp: "9/30/2023, 11:34:00 PM",
       addressFrom: "0xfF0f003b10283292E903cFc1c25b4F59c2BE1deA",
       amount: "0.0001",

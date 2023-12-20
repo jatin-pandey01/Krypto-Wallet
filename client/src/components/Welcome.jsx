@@ -11,7 +11,7 @@ const Welcome = () => {
     // const connectWallet = ()=>{}
     const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white';
     const inputStyles = 'w-full my-2 rounded p-2 border-none white-glassmorphism bg-transparent outline-none text-white';
-    const {connectWallet,connectedAccount,handleChange,formData,sendTransaction} = useContext(TransactionContext);
+    const {connectWallet,connectedAccount,handleChange,formData,sendTransaction,isLoading} = useContext(TransactionContext);
     
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -72,7 +72,7 @@ const Welcome = () => {
                     <input type='text' step='0.0001' placeholder='Enter Message' name='message' onChange={(e)=>{handleChange(e,'message')}} className={`${inputStyles}`}/>
                     <div className='h-[1px] w-full bg-gray-400 my-2' />
                     {
-                        false ? <Loader/> : 
+                        isLoading ? <Loader/> : 
                         (<button type='button' onClick={handleSubmit} className='text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full'>
                             Send Now
                         </button>)
